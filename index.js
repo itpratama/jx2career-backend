@@ -16,8 +16,8 @@ const archiver = require("archiver");
 // Database configuration
 const dbConfig = {
   user: 'sa',
-  password: 'Pai2015',
-  server: '172.16.200.28',
+  password: 'Itjx2025!',
+  server: '153.92.5.18',
   database: 'JX2HRD',
   options: {
     encrypt: false, // for Azure
