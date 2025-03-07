@@ -1477,7 +1477,7 @@ app.post('/downloadFile', async (req, res) => {
       return res.status(400).send({ message: 'NIK is required' });
     }
 
-    const filePath = path.join(__dirname, 'data', 'Dokumen', `${nik}_Dokumen.pdf`);
+    const filePath = path.join(__dirname, 'data', 'Dokumen', `${nik}_dokumen.pdf`);
 
     if (!fsSync.existsSync(filePath)) {
       return res.status(404).send({ message: 'File not found' });
