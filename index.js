@@ -1483,7 +1483,7 @@ app.post('/downloadFile', async (req, res) => {
       return res.status(404).send({ message: 'File not found' });
     }
 
-    res.download(filePath, `${nik}_Dokumen.pdf`, (err) => {
+    res.download(filePath, `${nik}_dokumen.pdf`, (err) => {
       if (err) {
         console.error('Error during file download:', err);
         res.status(500).send({ message: 'Error downloading file' });
@@ -1610,7 +1610,7 @@ app.get('/viewFile', async (req, res) => {
       return res.status(400).send({ message: 'NIK is required' });
     }
 
-    const filePath = path.join(__dirname, 'data', 'Dokumen', `${nik}_Dokumen.pdf`);
+    const filePath = path.join(__dirname, 'data', 'Dokumen', `${nik}_dokumen.pdf`);
 
     if (!fsSync.existsSync(filePath)) {
       return res.status(404).send({ message: 'File not found' });
@@ -1627,7 +1627,6 @@ app.get('/viewFile', async (req, res) => {
     res.status(500).send({ message: 'Internal Server Error' });
   }
 });
-
 
 const PORT = 4005;
 app.listen(PORT, () => {
