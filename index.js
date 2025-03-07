@@ -1561,7 +1561,7 @@ app.post('/downloadDocuments', async (req, res) => {
     // Menentukan lokasi file berdasarkan NIK
     const folderPath = path.join(__dirname, 'data', 'Dokumen');
     const filesToArchive = nikList
-      .map(nik => path.join(folderPath, `${nik}_Dokumen.pdf`))
+      .map(nik => path.join(folderPath, `${nik}_dokumen.pdf`))
       .filter(filePath => fsSync.existsSync(filePath));
 
     if (filesToArchive.length === 0) {
